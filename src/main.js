@@ -1,14 +1,15 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import { 
+import {
   Button,
   Tabbar,
   TabbarItem,
   NavBar,
   NoticeBar,
   Field,
-  Popup ,
-  Picker } from 'vant'
+  Popup,
+  Picker,
+} from 'vant'
 import 'vant/lib/index.css'
 import router from './router'
 

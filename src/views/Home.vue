@@ -1,50 +1,50 @@
 <template>
   <div class="page-container">
     <van-nav-bar title="智能旅游助手" />
-    <div class="page-content">
-      <van-notice-bar
-        left-icon="volume-o"
-        text="基于AI智能旅游助手，为用户提供专业的旅游建议。"
-      />
-
-      <div class="card">
-        <div class="section-title">规划你的旅程</div>
-        <van-field
-          @click="showCityPicker = true"
-          v-model="formData.city"
-          label="文本"
-          placeholder="请输入目的地"
-        />
-        <van-field
-          v-model="formData.budget"
-          label="文本"
-          placeholder="请输入预算"
-        />
-        <van-field
-          v-model="formData.days"
-          label="文本"
-          placeholder="请输入天数"
-        />
-      </div>
-
-      <div class="card">
-        <div class="section-title">快捷入口</div>
-      </div>
-
-      <div class="card">
-        <div class="section-title">热门目的地</div>
-      </div>
-    </div>
-    <van-popup round="Bottom" v-model:show="showCityPicker" position="bottom">
-      <van-picker
-        title="标题"
-        :columns="columns"
-        @confirm="onConfirm"
-        @cancel="onCancel"
-        @change="onChange"
-      />
-    </van-popup>
   </div>
+  <div class="page-content">
+    <van-notice-bar
+      left-icon="volume-o"
+      text="基于AI智能旅游助手，为用户提供专业的旅游建议。"
+    />
+
+    <div class="card">
+      <div class="section-title">规划你的旅程</div>
+      <van-field
+        @click="showCityPicker = true"
+        v-model="formData.city"
+        label="文本"
+        placeholder="请输入目的地"
+      />
+      <van-field
+        v-model="formData.budget"
+        label="文本"
+        placeholder="请输入预算"
+      />
+      <van-field
+        v-model="formData.days"
+        label="文本"
+        placeholder="请输入天数"
+      />
+    </div>
+
+    <div class="card">
+      <div class="section-title">快捷入口</div>
+    </div>
+
+    <div class="card">
+      <div class="section-title">热门目的地</div>
+    </div>
+  </div>
+  <van-popup round="Bottom" v-model:show="showCityPicker" position="bottom">
+    <van-picker
+      title="标题"
+      :columns="columns"
+      @confirm="onConfirm"
+      @cancel="onCancel"
+      @change="onChange"
+    />
+  </van-popup>
 </template>
 
 <script setup>
