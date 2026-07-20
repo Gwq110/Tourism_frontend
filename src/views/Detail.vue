@@ -4,27 +4,35 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import { onMounted, reactive } from 'vue'
-import {useRoute} from 'vue-router'
+import { useRoute } from 'vue-router'
+import { post } from '@/utils/request'
 
 const route = useRoute()
 
-const formData = reactive({
-  city: '',
-  budget: '',
-  days: ''
-})
+
+const getRecommend = async () => {
+  try {
+    const formData = {
+      city: route.query.city,
+      budget: Number(route.query.budget),
+      days: Number(route.query.days),
+    }
+    const res = await post('/api/travel/recommend', formData)
+    console.log('推荐结果:', res)
+  } catch (error) {
+    console.error('请求失败:', error)
+  }
+}
 
 onMounted(() => {
-  formData.city = route.query.city
-  formData.budget = route.query.budget
-  formData.days = route.query.days
+  getRecommend()
 })
 </script>
 
 <style scoped>
 .home {
-    padding: 16px;
+  padding: 16px;
 }
 </style>
