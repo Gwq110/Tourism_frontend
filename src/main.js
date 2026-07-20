@@ -9,6 +9,10 @@ import {
   Field,
   Popup,
   Picker,
+  Icon,
+  Tag,
+  Grid, GridItem,
+  Toast,
 } from 'vant'
 import 'vant/lib/index.css'
 import router from './router'
@@ -23,4 +27,9 @@ app.use(Field)
 app.use(router)
 app.use(Popup)
 app.use(Picker)
+app.use(Icon)
+app.use(Tag)
+app.use(Grid)
+app.use(GridItem)
+app.use(Toast)
 app.mount('#app')
