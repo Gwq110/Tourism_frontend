@@ -8,11 +8,14 @@ import {
   NoticeBar,
   Field,
   Popup,
+  Loading,
   Picker,
   Icon,
   Tag,
-  Grid, GridItem,
+  Grid,
+  GridItem,
   Toast,
+  Empty,
 } from 'vant'
 import 'vant/lib/index.css'
 import router from './router'
@@ -32,4 +35,6 @@ app.use(Tag)
 app.use(Grid)
 app.use(GridItem)
 app.use(Toast)
+app.use(Loading)
+app.use(Empty)
 app.mount('#app')

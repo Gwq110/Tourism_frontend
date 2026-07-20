@@ -98,6 +98,10 @@ const onConfirm = ({selectedOptions}) => {
   showCityPicker.value = false
 }
 
+const onChange = () => {
+  // 城市选择器变更时的处理函数
+}
+
 const allCities =[
   '北京', '上海', '广州', '深圳', '成都', '杭州', '西安', '重庆',
   '南京', '武汉', '苏州', '长沙', '天津', '郑州', '济南', '青岛',
